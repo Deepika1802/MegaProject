@@ -42,8 +42,7 @@ stock_tickers = {
 def fetch_stock_data(ticker):
     # Fetch stock data from yfinance
     stock_data = yf.download(ticker, start=start_date, end=end_date)
-    # Add 'No. of Trades' column as a placeholder
-    stock_data["No. of Trades"] = None
+    
     return stock_data
 
 # Function to fetch and save data to separate CSV files for BSE and NSE
